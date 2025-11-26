@@ -6,8 +6,14 @@ Dept& Store::shoes() { return sDept; }
 
 Dept& Store::toys() { return tDept; }
 
-Product* Store::search(string name) {
-    Product* p = sDept.find(name);
+bool Store::search(string name) {
+    if (sDept.find(name)) return true;
+    if (tDept.find(name)) return true;
+    return false;
+}
+
+Product* Store::get(string name) {
+    Product* p = sDept.get(name);
     if (p != nullptr) return p;
-    return tDept.find(name);
+    return tDept.get(name);
 }

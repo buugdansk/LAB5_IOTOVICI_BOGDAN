@@ -17,14 +17,13 @@ bool byPrice(Product* a, Product* b) {
 }
 
 int main() {
+    // 1. add
     Store store;
     vector<Order> orders;
 
-    // pre-add
     store.shoes().add(new Shoe("nike", 100.0));
     store.toys().add(new Toy("lego", 50.0));
 
-    // 1. add
     int type; string name; double price;
     cin >> type >> name >> price;
     if (type == 1) {
@@ -35,9 +34,8 @@ int main() {
 
     // 2. find
     cin >> name;
-    Product* p = store.search(name);
-    if (p) {
-        cout << "found: "; p->display();
+    if (store.search(name)) {
+        cout << "found" << endl;
     } else {
         cout << "not found: " << name << endl;
     }
@@ -62,7 +60,7 @@ int main() {
         sort(allToys.begin(), allToys.end(), byPrice);
     }
 
-    // 5. show
+    // 5. display
     for (int i = 0; i < allShoes.size(); ++i) {
         allShoes[i]->display();
     }
@@ -73,14 +71,14 @@ int main() {
     // 6. order
     Order newOrder(1);
     cin >> name;
-    Product* found = store.search(name);
-    if (found) {
+    
+    Product* found = store.get(name);
+    if (found != nullptr) {
         newOrder.add(found);
         cout << "added '" << name << "' to order #1" << endl;
     }
     orders.push_back(newOrder);
 
-    // 7. search in order
     cin >> name;
     bool inOrder = false;
     for (int i = 0; i < orders.size(); ++i) {

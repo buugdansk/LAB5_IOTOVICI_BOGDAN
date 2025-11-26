@@ -12,7 +12,9 @@ public:
     Store();
     Dept& shoes();
     Dept& toys();
-    Product* search(string name);
+    
+    bool search(string name);
+    Product* get(string name);
 };
 
 #endif
