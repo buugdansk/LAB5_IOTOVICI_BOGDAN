@@ -16,9 +16,9 @@ public:
     void add(Product* p);
     void remove(string prodName);
     
-    bool find(string prodName);
-    
     Product* get(string prodName);
+
+    bool search(string prodName);
     
     vector<Product*> getAll() const;
     void show() const;

@@ -17,13 +17,13 @@ bool byPrice(Product* a, Product* b) {
 }
 
 int main() {
-    // 1. add
     Store store;
     vector<Order> orders;
 
     store.shoes().add(new Shoe("nike", 100.0));
     store.toys().add(new Toy("lego", 50.0));
 
+    // add
     int type; string name; double price;
     cin >> type >> name >> price;
     if (type == 1) {
@@ -32,20 +32,20 @@ int main() {
         store.toys().add(new Toy(name, price));
     }
 
-    // 2. find
+    // find
     cin >> name;
-    if (store.search(name)) {
+    if (store.search(name) == true) {
         cout << "found" << endl;
     } else {
         cout << "not found: " << name << endl;
     }
 
-    // 3. remove
+    // remove
     cin >> name;
     store.shoes().remove(name);
     store.toys().remove(name);
 
-    // 4. sort
+    // sort
     int sortChoice;
     cin >> sortChoice;
 
@@ -60,7 +60,7 @@ int main() {
         sort(allToys.begin(), allToys.end(), byPrice);
     }
 
-    // 5. display
+    // display
     for (int i = 0; i < allShoes.size(); ++i) {
         allShoes[i]->display();
     }
@@ -68,7 +68,7 @@ int main() {
         allToys[i]->display();
     }
 
-    // 6. order
+    // order
     Order newOrder(1);
     cin >> name;
     
@@ -79,6 +79,7 @@ int main() {
     }
     orders.push_back(newOrder);
 
+    // search order
     cin >> name;
     bool inOrder = false;
     for (int i = 0; i < orders.size(); ++i) {
@@ -90,14 +91,14 @@ int main() {
             }
         }
     }
-    if (!inOrder) cout << "not found in orders" << endl;
+    if (!inOrder) cout << "order not found" << endl;
 
-    // 7. total
+    // total
     double grandTotal = 0;
     for (int i = 0; i < orders.size(); ++i) {
         grandTotal += orders[i].getTotal();
     }
-    cout << "grand total revenue: $" << grandTotal << endl;
+    cout << "total:" << grandTotal << endl;
 
     return 0;
 }

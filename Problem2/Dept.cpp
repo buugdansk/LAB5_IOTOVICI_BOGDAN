@@ -25,18 +25,15 @@ void Dept::remove(string prodName) {
     }
 }
 
-bool Dept::find(string prodName) {
-    for (int i = 0; i < inv.size(); ++i) {
-        if (inv[i]->getName() == prodName) return true;
-    }
-    return false;
-}
-
 Product* Dept::get(string prodName) {
     for (int i = 0; i < inv.size(); ++i) {
         if (inv[i]->getName() == prodName) return inv[i];
     }
     return nullptr;
+}
+
+bool Dept::search(string prodName) {
+    return get(prodName) != nullptr;
 }
 
 vector<Product*> Dept::getAll() const {
