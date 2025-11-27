@@ -8,18 +8,13 @@ class Dept {
 private:
     string name;
     vector<Product*> inv;
-
 public:
     Dept(string n);
     ~Dept();
-
     void add(Product* p);
-    void remove(string prodName);
-    
+    void remove(string prodName);    
     Product* get(string prodName);
-
     bool search(string prodName);
-    
     vector<Product*> getAll() const;
     void show() const;
 };

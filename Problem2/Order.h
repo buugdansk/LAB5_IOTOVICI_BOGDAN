@@ -8,7 +8,6 @@ class Order {
 private:
     int id;
     vector<Product*> items;
-
 public:
     Order(int orderId);
     void add(Product* p);

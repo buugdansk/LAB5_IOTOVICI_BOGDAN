@@ -10,14 +10,11 @@ class Product {
 protected:
     string name;
     double price;
-
 public:
     Product(string n, double p);
     virtual ~Product();
-
     string getName() const;
     double getPrice() const;
-
     virtual void display() const;
 };
 

@@ -19,7 +19,6 @@ bool byPrice(Product* a, Product* b) {
 int main() {
     Store store;
     vector<Order> orders;
-
     store.shoes().add(new Shoe("nike", 100.0));
     store.toys().add(new Toy("lego", 50.0));
 
@@ -48,10 +47,8 @@ int main() {
     // sort
     int sortChoice;
     cin >> sortChoice;
-
     vector<Product*> allShoes = store.shoes().getAll();
     vector<Product*> allToys = store.toys().getAll();
-
     if (sortChoice == 1) {
         sort(allShoes.begin(), allShoes.end(), byName);
         sort(allToys.begin(), allToys.end(), byName);
@@ -71,7 +68,6 @@ int main() {
     // order
     Order newOrder(1);
     cin >> name;
-    
     Product* found = store.get(name);
     if (found != nullptr) {
         newOrder.add(found);
