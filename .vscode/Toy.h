@@ -6,7 +6,7 @@
 class Toy : public Product {
 public:
     Toy(string n, double p);
-    void display() const override;
+    void displayInfo() const;
 };
 
 #endif

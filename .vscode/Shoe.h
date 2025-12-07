@@ -6,7 +6,7 @@
 class Shoe : public Product {
 public:
     Shoe(string n, double p);
-    void display() const override;
+    void displayInfo() const; 
 };
 
 #endif
