@@ -10,9 +10,12 @@ int main() {
     Department store("The Store");
 
     // --- TASK 1: ADD PRODUCTS ---
-    store.addProduct(new Shoe("Nike Air", 100.0));
+    store.addProduct(new Shoe("Nike", 100.0));
     store.addProduct(new Toy("Lego", 50.0));
-    store.addProduct(new Shoe("Boots", 120.0));
+    store.addProduct(new Shoe("Puma", 120.0));
+    store.addProduct(new Toy("Blocks", 70.0));
+    store.addProduct(new Shoe("Airforce1", 200.0));
+    store.addProduct(new Toy("Doll", 10.0));
 
     store.showInventory();
     // --- TASK 2: FIND PRODUCT ---
@@ -46,7 +49,7 @@ int main() {
     // --- TASK 5: ORDER/RECEIPT ---
     Order myOrder;
     myOrder.addToOrder(store.findProduct("Lego"));
-    myOrder.addToOrder(store.findProduct("Boots"));
+    myOrder.addToOrder(store.findProduct("Blocks"));
     myOrder.printReceipt();
     // --- TASK 6: CHECK ITEM IN ORDER ---
     string checkName;

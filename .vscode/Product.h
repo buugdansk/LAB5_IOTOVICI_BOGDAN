@@ -1,16 +1,15 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
-#include <string>    // <--- REQUIRED for 'string'
-#include <iostream>  // <--- REQUIRED for 'cout'
-using namespace std; // <--- REQUIRED to use them without 'std::'
+#include <string> 
+#include <iostream> 
+using namespace std; 
 
 class Product {
 protected:
     string name;
     double price;
 
-    // Protected constructor: Only Shoe/Toy can use this
     Product(string n, double p);
 
 public:

@@ -1,6 +1,6 @@
 #include "Product.h"
-#include <iostream>  // <--- ADD THIS
-using namespace std; // <--- ADD THIS
+#include <iostream> 
+using namespace std; 
 
 Product::Product(string n, double p) {
     name = n;

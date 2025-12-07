@@ -40,7 +40,6 @@ void Department::sortByPrice() {
 }
 // SHOW INVENTORY
 void Department::showInventory() {
-    cout << " Inventory for " << name << endl;
     if (inventory.empty()) {
         cout << "Empty" << endl;
     } else {

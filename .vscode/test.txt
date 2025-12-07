@@ -1,0 +1,38 @@
+Nike ($100)     
+Lego ($50)      
+Puma ($120)     
+Blocks ($70)    
+Airforce1 ($200)
+Doll ($10)      
+
+task 2 search: Doll
+product found  
+task 3 remove: Doll
+product removed 
+Nike ($100)     
+Lego ($50)      
+Puma ($120)     
+Blocks ($70)    
+Airforce1 ($200)
+
+Sorting inventory by name and then by price
+Sorted by Name.
+Airforce1 ($200)
+Blocks ($70)
+Lego ($50)
+Nike ($100)
+Puma ($120)
+
+Sorted by Price.
+Lego ($50)
+Blocks ($70)
+Nike ($100)
+Puma ($120)
+Airforce1 ($200)
+
+- Receipt -
+Product: Lego | Price: $50
+Product: Blocks | Price: $70
+Total: $120.00
+task 6 check: Lego
+Item is in the order.

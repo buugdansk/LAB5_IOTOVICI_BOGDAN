@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include <algorithm> // <--- REQUIRED for sorting
+#include <algorithm> 
 #include "Product.h"
 
 class Department {
