@@ -9,7 +9,7 @@ using namespace std;
 int main() {
     Department store("The Store");
 
-    // --- TASK 1: ADD PRODUCTS ---
+    // add
     store.addProduct(new Shoe("Nike", 100.0));
     store.addProduct(new Toy("Lego", 50.0));
     store.addProduct(new Shoe("Puma", 120.0));
@@ -18,7 +18,7 @@ int main() {
     store.addProduct(new Toy("Doll", 10.0));
 
     store.showInventory();
-    // --- TASK 2: FIND PRODUCT ---
+    // find
     string searchName;
     cout << "task 2 search: ";
     getline(cin, searchName); 
@@ -29,7 +29,7 @@ int main() {
         cout << "not found" << endl;
     }
     
-    // --- TASK 3: REMOVE PRODUCT ---
+    // remove
     string removeName;
     cout << "task 3 remove: ";
     getline(cin, removeName);
@@ -40,25 +40,25 @@ int main() {
     } else {
         cout << "product not found" << endl;
     }
-    // --- TASK 4: SORTING ---
+    // sort
     cout << "Sorting inventory by name and then by price" << endl;
     store.sortByName();
     store.showInventory();
     store.sortByPrice();
     store.showInventory();
-    // --- TASK 5: ORDER/RECEIPT ---
-    Order myOrder;
-    myOrder.addToOrder(store.findProduct("Lego"));
-    myOrder.addToOrder(store.findProduct("Blocks"));
-    myOrder.printReceipt();
-    // --- TASK 6: CHECK ITEM IN ORDER ---
+    // order/receipt
+    Order order;
+    order.addToOrder(store.findProduct("Lego"));
+    order.addToOrder(store.findProduct("Blocks"));
+    order.printReceipt();
+    // check
     string checkName;
     cout << "task 6 check: ";
     getline(cin, checkName);
 
-    if (myOrder.hasProduct(checkName)) {
-        cout << "Item is in the order." << endl;
+    if (order.hasProduct(checkName)) {
+        cout << "Item in order." << endl;
     } else {
-        cout << "Item is not in the order." << endl;
+        cout << "Item not in order." << endl;
     }
 }
